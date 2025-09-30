@@ -8,7 +8,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 app.get('/api/health', (req, res) => res.json({ ok: true }));
-app.use('/api/perks', perkRoutes);
+app.use('/api/perks', perkRoutes); //the prefix of all perk routes
+//perks is a data modeling package
 
 // Not found
 app.use((req, res, next) => {
